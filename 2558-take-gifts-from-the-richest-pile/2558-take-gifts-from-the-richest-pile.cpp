@@ -3,7 +3,6 @@ public:
     long long pickGifts(vector<int>& gifts, int k) {
         int n=gifts.size()-1;
         long s=0;
-       // sort(gifts.begin(),gifts.end());
         while(k--){
              sort(gifts.begin(),gifts.end());  
             int p=gifts[n];
