@@ -3,12 +3,9 @@ public:
     long long pickGifts(vector<int>& gifts, int k) {
         int n=gifts.size()-1;
         long s=0;
-        while(k--){
+       for(int i=0;i<k;i++){
              sort(gifts.begin(),gifts.end());  
-           // int p=gifts[n];
-           // p=sqrt(p);
-            gifts[n]=sqrt(gifts[n]);
-                   
+            gifts[n]=sqrt(gifts[n]);                   
         }
         for(int i=0;i<=n;i++)
             s+=gifts[i];
