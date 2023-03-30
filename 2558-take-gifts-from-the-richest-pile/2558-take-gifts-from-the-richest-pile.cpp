@@ -5,9 +5,9 @@ public:
         long s=0;
         while(k--){
              sort(gifts.begin(),gifts.end());  
-            int p=gifts[n];
-            p=sqrt(p);
-            gifts[n]=p;
+           // int p=gifts[n];
+           // p=sqrt(p);
+            gifts[n]=sqrt(gifts[n]);
                    
         }
         for(int i=0;i<=n;i++)
