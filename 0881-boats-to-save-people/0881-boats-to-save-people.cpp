@@ -11,12 +11,10 @@ public:
             if(sum<=limit){
                 left++;
                 right--;
-                boat++;
             }
-            else{
+            else
                 right--;
-                boat++;
-            }
+            boat++;
         }
         return boat;
     }
