@@ -31,7 +31,6 @@ public:
                 for(Node* neighbor:node->neighbors)
                     copies[node]->neighbors.push_back(cloneGraph(neighbor));
             }
-               return copies[node];     
-
+        return copies[node];     
     }
 };
