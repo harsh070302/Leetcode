@@ -5,7 +5,7 @@ public:
         string res="";
 
         for(int i=0;i<path.size();i++){
-                    string temp="";
+            string temp="";
             if(path[i]=='/')
                 continue;
             while(i<path.size() && path[i]!='/'){
