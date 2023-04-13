@@ -6,8 +6,8 @@ public:
         for(int i=0;i<pushed.size();i++){
             s.push(pushed[i]);
             while(!s.empty() && s.top()==popped[j]){
-                s.pop();
                 j++;
+                s.pop();
             }
                 
         }
