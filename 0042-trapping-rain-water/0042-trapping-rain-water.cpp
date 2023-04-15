@@ -17,12 +17,10 @@ public:
         
         int water[n];
         
-        for(int i=0;i<n;i++)
+        for(int i=0;i<n;i++){
             water[i]=min(mxl[i],mxr[i]) - height[i];
-        
-        for(int i=0;i<n;i++)
             s+=water[i];
-        
+        }
         return s;
     }
 };
