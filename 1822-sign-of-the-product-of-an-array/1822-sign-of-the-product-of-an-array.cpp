@@ -9,8 +9,7 @@ public:
          if(nums[i]<0)
             p= -p;
         else if(nums[i]==0){
-            p= 0;
-            break;
+           return 0;
         }
         }
         return p;
