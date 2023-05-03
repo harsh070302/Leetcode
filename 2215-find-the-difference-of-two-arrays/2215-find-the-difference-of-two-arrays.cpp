@@ -20,6 +20,6 @@ public:
         
         ans[0]=v1;
         ans[1]=v2;
-        return {v1,v2};
+        return ans;
     }
 };
