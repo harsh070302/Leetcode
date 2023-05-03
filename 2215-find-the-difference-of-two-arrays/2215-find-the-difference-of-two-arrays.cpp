@@ -15,9 +15,11 @@ public:
             if(s1.count(j)==0)
                 v2.push_back(j);
         }
-        ans.push_back(v1);
-        ans.push_back(v2);
+        // ans.push_back(v1);
+        // ans.push_back(v2);
         
+        ans[0]=v1;
+        ans[1]=v2;
         return {v1,v2};
     }
 };
