@@ -16,7 +16,7 @@ public:
             b--;
         else if(carType==2)
             m--;
-        else if(carType==3)
+        else
             s--;
         return true;
         
