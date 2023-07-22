@@ -1,49 +1,31 @@
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        int n=matrix.size();
+        int m=matrix[0].size();
+        vector<int>ans;
+        int left=0,right=m-1,top=0,bottom=n-1;
         
-     vector<int> ans;
-        int row = matrix.size();
-        int col = matrix[0].size();
+        while(top<=bottom && left<=right){
+        for(int i=left;i<=right;i++)
+            ans.push_back(matrix[top][i]);
+        top++;
         
-        int count = 0;
-        int total = row*col;
+        for(int i=top;i<=bottom;i++)
+            ans.push_back(matrix[i][right]);
+        right--;
         
-
-        int startingRow = 0;
-        int startingCol = 0;
-        int endingRow = row-1;
-        int endingCol = col-1;
+        if(top<=bottom)
+            for(int i=right;i>=left;i--)
+                ans.push_back(matrix[bottom][i]);
+            bottom--;
         
+        if(left<=right)
+            for(int i=bottom;i>=top;i--)
+                ans.push_back(matrix[i][left]);
+            left++;
+        }
         
-        while(count < total) {
-            
-            for(int index = startingCol; count < total && index<=endingCol; index++) {
-                ans.push_back(matrix[startingRow][index]);
-                count++;
-            }
-            startingRow++;
-            
-
-            for(int index = startingRow; count < total && index<=endingRow; index++) {
-                ans.push_back(matrix[index][endingCol]);
-                count++;
-            }
-            endingCol--;
-            
-
-            for(int index = endingCol; count < total && index>=startingCol; index--) {
-                ans.push_back(matrix[endingRow][index]);
-                count++;
-            }
-            endingRow--;
-            
-            for(int index = endingRow; count < total && index>=startingRow; index--) {
-                ans.push_back(matrix[index][startingCol]);
-                count++;
-            }
-            startingCol++;
-        } 
         return ans;
     }
 };
