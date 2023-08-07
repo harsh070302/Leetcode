@@ -3,11 +3,11 @@ public:
     string removeOuterParentheses(string s) {
         stack<char> st;
         string ans="";
-        for(auto c:s){
+        for(auto i:s){
             if(!st.empty())
-                ans+=c;
-            if(c=='(')
-                st.push(c);
+                ans+=i;
+            if(i=='(')
+                st.push(i);
             else{
                 st.pop();
                 if(st.empty())
