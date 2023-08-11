@@ -3,7 +3,7 @@ public:
     int maxDepth(string s) {
         int depth=0, maxDepth=0;
         
-        for(auto c:s){
+        for(char c:s){
             if(c=='('){
                 depth++;
                 maxDepth=max(maxDepth,depth);
